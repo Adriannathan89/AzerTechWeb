@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap');
+
+:root {
+  --body-font: 'Manrope', 'Segoe UI', sans-serif;
+  --heading-font: 'Sora', 'Segoe UI', sans-serif;
+
+  --brand: #0f9fcd;
+  --brand-strong: #0d7da2;
+
+  --bg: #edf1f4;
+  --surface: rgba(255, 255, 255, 0.88);
+  --surface-elevated: rgba(248, 251, 255, 0.9);
+  --line: rgba(15, 22, 32, 0.14);
+  --text-strong: #101922;
+  --text-soft: #4a5765;
+
+  --chip-bg: rgba(15, 159, 205, 0.11);
+  --chip-line: rgba(15, 159, 205, 0.32);
+  --tint: rgba(15, 159, 205, 0.14);
+  --highlight: rgba(255, 255, 255, 0.5);
+
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --bg: #0b1016;
+  --surface: rgba(17, 24, 33, 0.86);
+  --surface-elevated: rgba(21, 30, 41, 0.92);
+  --line: rgba(194, 221, 241, 0.16);
+  --text-strong: #edf6ff;
+  --text-soft: #b5c3cf;
+
+  --chip-bg: rgba(15, 159, 205, 0.17);
+  --chip-line: rgba(70, 198, 238, 0.32);
+  --tint: rgba(15, 159, 205, 0.2);
+  --highlight: rgba(143, 218, 255, 0.14);
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+html {
+  font-size: 17px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  color: var(--text-strong);
+  background:
+    radial-gradient(circle at 10% 10%, var(--tint) 0, transparent 38%),
+    radial-gradient(circle at 95% 90%, var(--highlight) 0, transparent 45%),
+    var(--bg);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 260ms ease, color 260ms ease;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--heading-font);
+  color: var(--text-strong);
+  margin: 0;
+}
+
+p {
+  line-height: 1.62;
+}
+
+a {
+  color: inherit;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 16px;
+  }
+}
