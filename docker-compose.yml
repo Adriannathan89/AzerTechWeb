@@ -5,5 +5,5 @@ services:
       dockerfile: Dockerfile
     container_name: azertechweb
     ports:
-      - "4040:40"
+      - "4040:80"
     restart: unless-stopped

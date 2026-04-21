@@ -42,7 +42,7 @@ function App() {
         <div className="brand-inline">
           {showLogo ? (
             <img
-              src="src/assets/AzerLogo.jpeg"
+              src="/AzerLogo.jpeg"
               alt="Azer Technologies logo"
               className="brand-logo"
               onError={() => setShowLogo(false)}
@@ -92,7 +92,7 @@ function App() {
       <section className="banner-strip" aria-label="Company banner">
         {showBanner ? (
           <img
-            src="src/assets/AzerBanner.jpeg"
+            src="/AzerBanner.jpeg"
             alt="Azer Technologies banner"
             onError={() => setShowBanner(false)}
           />
